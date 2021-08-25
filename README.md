@@ -19,6 +19,7 @@ https://jsonplaceholder.typicode.com/users
                 "lng": "81.1496"
             }
         }
+}
 ```
 
 ### Core Data Model
