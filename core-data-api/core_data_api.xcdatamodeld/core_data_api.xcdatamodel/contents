@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Address" representedClassName=".Address" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="street" optional="YES" attributeType="String"/>
+        <relationship name="geo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geolocation" inverseName="fullAddress" inverseEntity="Geolocation"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="address" inverseEntity="User"/>
+    </entity>
+    <entity name="Geolocation" representedClassName=".Geolocation" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <relationship name="fullAddress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="geo" inverseEntity="Address"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="email" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="user" inverseEntity="Address"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="Address" positionX="86.484619140625" positionY="27.1422119140625" width="128" height="89"/>
+        <element name="Geolocation" positionX="-93.0211181640625" positionY="241.5732116699219" width="128" height="74"/>
+        <element name="User" positionX="276.3367919921875" positionY="223.4423217773438" width="128" height="89"/>
+    </elements>
+</model>

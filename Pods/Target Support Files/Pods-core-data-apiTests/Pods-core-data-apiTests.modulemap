@@ -1,0 +1,6 @@
+framework module Pods_core_data_apiTests {
+  umbrella header "Pods-core-data-apiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
