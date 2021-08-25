@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  core-data-api
 //
-//  Created by GMV on 24/08/21.
+//  Created by Topik Mujianto on 24/08/21.
 //
 //
 
